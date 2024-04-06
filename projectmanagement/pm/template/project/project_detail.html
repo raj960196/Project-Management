@@ -1,0 +1,20 @@
+{% extends "../base.html" %}
+{% load static %}
+{% load crispy_forms_tags %} 
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+        <div>
+            <h2> Name : {{project.name}}</h2>
+            <h2> Description : {{project.description}}</h2>
+            <h2> Technology : {{project.technology}}</h2>
+            <h2> Estimated_Hours : {{project.estimated_hours}}</h2>
+            <h2> StartDate : {{project.startDate}}</h2>
+            <h2> EndDate : {{project.endDate}}</h2>
+        </div>
+    </div>
+  </div>
+
+  {% endblock content %}
+</div>

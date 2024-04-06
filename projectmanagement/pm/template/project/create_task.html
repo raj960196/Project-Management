@@ -1,0 +1,19 @@
+{% extends "../base.html" %}
+{% load static %}
+{% load crispy_forms_tags %} 
+{% block content %}
+ <form method="post" class="form-group">
+    {% csrf_token %} 
+    {% comment %} {{form.module_id|as_crispy_field}} {% endcomment %}
+    {{form.project_id|as_crispy_field}}
+    {{form.tital|as_crispy_field}}
+    {{form.priority|as_crispy_field}}
+    {{form.des|as_crispy_field}}
+    {% comment %} {{form.status_id|as_crispy_field}} {% endcomment %}
+    {{form.total_minute|as_crispy_field}}
+    <button type="submit" class="btn btn-secondary">Create</button>
+  </form>  
+  {% endblock content %}
+
+
+  
